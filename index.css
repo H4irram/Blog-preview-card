@@ -56,6 +56,12 @@ p {
   border-radius: 1rem;
 }
 
+.card__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .card__eyebrow-text {
   background-color: var(--bg-yellow);
   padding: 5px 10px;
@@ -64,11 +70,13 @@ p {
   font-size: 1rem;
   text-align: center;
   border-radius: 6px;
+  order: -1;
 }
 
 .card__date-published {
   font-weight: 600;
   font-size: 0.9rem;
+  order: -2;
 }
 
 .card__title {
