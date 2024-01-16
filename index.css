@@ -1,0 +1,133 @@
+* {
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: var(--bg-yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.card-wrapper {
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #000;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+  margin: 0 auto;
+}
+
+.card {
+  max-width: 375px;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card__img {
+  border-radius: 1rem;
+}
+
+.card__eyebrow-text {
+  background-color: var(--bg-yellow);
+  padding: 5px 10px;
+  font-weight: 800;
+  width: 90px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.card__date-published {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.card__title:hover {
+  color: var(--bg-yellow);
+  cursor: pointer;
+}
+
+.card__copy {
+  color: var(--Grey);
+  line-height: 1.6;
+}
+.author {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.author__img {
+  width: 35px;
+}
+
+.author__name {
+  font-weight: 800;
+}
+
+.attribution {
+  margin-top: 50px;
+  font-size: 1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Styles for screens up to 375px (mobile) */
+@media only screen and (max-width: 375px) {
+  /* Your mobile styles go here */
+  body {
+    padding: 0 20px;
+  }
+
+  .card__eyebrow-text {
+    width: 80px;
+    font-size: 13px;
+  }
+  .card__date-published {
+    font-size: 13px;
+  }
+  .card__title {
+    font-size: 1.35rem;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
